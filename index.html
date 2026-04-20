@@ -1,0 +1,1405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Ieisha Fuller — Master Naturalist & Land Literacy Educator</title>
+<meta name="description" content="Master Naturalist Ieisha Fuller helps small land owners turn their ground into generational wealth — starting with what's already growing."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+
+<style>
+:root{
+  --forest:#1E3D0F;
+  --sage:#4A7A2E;
+  --sage-light:#6B9E47;
+  --gold:#B8892A;
+  --gold-light:#D4A843;
+  --cream:#F5F0E8;
+  --warm-white:#FDFAF4;
+  --earth:#6B4C2A;
+  --bark:#3D2B1A;
+  --text:#1A1A1A;
+  --text-mid:#4A4A4A;
+  --text-light:#7A7A7A;
+  --leaf-pattern: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%234A7A2E' fill-opacity='0.06'%3E%3Cpath d='M30 0 C30 0 45 15 45 30 C45 45 30 60 30 60 C30 60 15 45 15 30 C15 15 30 0 30 0Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+html{scroll-behavior:smooth}
+
+body{
+  font-family:'DM Sans',sans-serif;
+  background:var(--warm-white);
+  color:var(--text);
+  overflow-x:hidden;
+}
+
+/* ── NAVIGATION ─────────────────────────────────────── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  padding:1rem 2rem;
+  display:flex;align-items:center;justify-content:space-between;
+  background:rgba(253,250,244,0.92);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(74,122,46,0.15);
+  transition:all .3s;
+}
+.nav-logo{
+  font-family:'Playfair Display',serif;
+  font-size:1.15rem;font-weight:700;
+  color:var(--forest);
+  letter-spacing:-.3px;
+}
+.nav-logo span{color:var(--gold);}
+.nav-links{display:flex;gap:2rem;align-items:center;}
+.nav-links a{
+  font-size:.85rem;font-weight:500;
+  color:var(--text-mid);text-decoration:none;
+  letter-spacing:.02em;
+  transition:color .2s;
+}
+.nav-links a:hover{color:var(--sage);}
+.nav-cta{
+  background:var(--forest);color:#fff!important;
+  padding:.5rem 1.25rem;border-radius:50px;
+  font-size:.85rem!important;font-weight:600!important;
+  transition:background .2s!important;
+}
+.nav-cta:hover{background:var(--sage)!important;}
+
+/* ── HERO ───────────────────────────────────────────── */
+#hero{
+  min-height:100vh;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  padding-top:72px;
+  background:var(--forest);
+  position:relative;
+  overflow:hidden;
+}
+
+.hero-bg-pattern{
+  position:absolute;inset:0;
+  background-image:var(--leaf-pattern);
+  opacity:.4;
+  pointer-events:none;
+}
+
+.hero-left{
+  padding:5rem 3rem 5rem 5rem;
+  display:flex;flex-direction:column;justify-content:center;
+  position:relative;z-index:2;
+}
+
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:.5rem;
+  background:rgba(184,137,42,0.2);
+  border:1px solid rgba(184,137,42,0.4);
+  color:var(--gold-light);
+  font-size:.75rem;font-weight:600;letter-spacing:.1em;
+  text-transform:uppercase;
+  padding:.4rem 1rem;border-radius:50px;
+  margin-bottom:1.5rem;
+  width:fit-content;
+  animation:fadeUp .6s ease both;
+}
+
+.hero-name{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(2.8rem,5vw,4.5rem);
+  font-weight:900;
+  color:#fff;
+  line-height:1.05;
+  letter-spacing:-.5px;
+  margin-bottom:1rem;
+  animation:fadeUp .6s .1s ease both;
+}
+.hero-name em{
+  font-style:italic;
+  color:var(--gold-light);
+}
+
+.hero-statement{
+  font-size:1.1rem;font-weight:300;
+  color:rgba(255,255,255,.8);
+  line-height:1.7;
+  max-width:480px;
+  margin-bottom:2rem;
+  animation:fadeUp .6s .2s ease both;
+}
+.hero-statement strong{
+  color:#fff;font-weight:600;
+}
+
+.hero-badges{
+  display:flex;flex-wrap:wrap;gap:.5rem;
+  margin-bottom:2.5rem;
+  animation:fadeUp .6s .3s ease both;
+}
+.badge{
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.2);
+  color:rgba(255,255,255,.85);
+  font-size:.75rem;font-weight:500;
+  padding:.35rem .85rem;border-radius:50px;
+  letter-spacing:.02em;
+}
+
+.hero-actions{
+  display:flex;gap:1rem;flex-wrap:wrap;
+  animation:fadeUp .6s .4s ease both;
+}
+.btn-primary{
+  background:var(--gold);color:var(--forest);
+  padding:.85rem 2rem;border-radius:50px;
+  font-size:.95rem;font-weight:700;
+  text-decoration:none;
+  border:none;cursor:pointer;
+  transition:all .25s;
+  display:inline-flex;align-items:center;gap:.5rem;
+  letter-spacing:.01em;
+}
+.btn-primary:hover{
+  background:var(--gold-light);
+  transform:translateY(-2px);
+  box-shadow:0 8px 24px rgba(184,137,42,.4);
+}
+.btn-ghost{
+  background:transparent;
+  border:1.5px solid rgba(255,255,255,.35);
+  color:#fff;
+  padding:.85rem 2rem;border-radius:50px;
+  font-size:.95rem;font-weight:500;
+  text-decoration:none;
+  transition:all .25s;
+  display:inline-flex;align-items:center;gap:.5rem;
+}
+.btn-ghost:hover{
+  border-color:rgba(255,255,255,.7);
+  background:rgba(255,255,255,.08);
+}
+
+.hero-right{
+  position:relative;
+  display:flex;align-items:center;justify-content:center;
+  padding:4rem 4rem 4rem 2rem;
+  z-index:2;
+  animation:fadeIn .8s .2s ease both;
+}
+
+.hero-card{
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.15);
+  backdrop-filter:blur(8px);
+  border-radius:20px;
+  padding:2.5rem;
+  width:100%;max-width:420px;
+}
+
+.hero-stat-grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:1.25rem;margin-bottom:2rem;
+}
+.hero-stat{
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:12px;padding:1.25rem;
+  text-align:center;
+}
+.hero-stat-num{
+  font-family:'Playfair Display',serif;
+  font-size:2rem;font-weight:700;
+  color:var(--gold-light);
+  display:block;line-height:1;margin-bottom:.25rem;
+}
+.hero-stat-label{
+  font-size:.75rem;font-weight:400;
+  color:rgba(255,255,255,.6);line-height:1.3;
+}
+
+.hero-quote{
+  font-family:'Playfair Display',serif;
+  font-size:1rem;font-style:italic;
+  color:rgba(255,255,255,.9);
+  line-height:1.65;
+  border-left:3px solid var(--gold);
+  padding-left:1rem;
+  margin-bottom:2rem;
+}
+
+.hero-book-cta{
+  background:var(--gold);color:var(--forest);
+  padding:1rem 1.5rem;border-radius:12px;
+  text-decoration:none;font-weight:700;
+  font-size:.9rem;
+  display:flex;align-items:center;justify-content:space-between;
+  transition:all .25s;
+}
+.hero-book-cta:hover{
+  background:var(--gold-light);
+  transform:translateY(-2px);
+}
+.hero-book-cta span{font-size:.8rem;font-weight:400;opacity:.8;}
+
+/* ── SECTION SHARED ─────────────────────────────────── */
+section{padding:5rem 2rem;}
+.container{max-width:1100px;margin:0 auto;}
+.section-eyebrow{
+  font-size:.75rem;font-weight:600;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--sage);
+  display:flex;align-items:center;gap:.5rem;
+  margin-bottom:.75rem;
+}
+.section-eyebrow::before{
+  content:'';display:block;
+  width:24px;height:2px;background:var(--gold);
+}
+.section-title{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(1.8rem,3.5vw,2.6rem);
+  font-weight:700;line-height:1.15;
+  color:var(--forest);letter-spacing:-.3px;
+  margin-bottom:1rem;
+}
+.section-sub{
+  font-size:1rem;color:var(--text-mid);
+  line-height:1.7;max-width:560px;
+}
+
+/* ── ABOUT / STORY ──────────────────────────────────── */
+#about{background:var(--cream);}
+
+.about-grid{
+  display:grid;grid-template-columns:1fr 1.4fr;
+  gap:4rem;align-items:start;
+}
+
+.about-visual{
+  position:relative;
+}
+.about-img-frame{
+  background:var(--forest);
+  border-radius:20px;
+  aspect-ratio:3/4;
+  display:flex;align-items:flex-end;
+  overflow:hidden;
+  position:relative;
+}
+.about-img-placeholder{
+  position:absolute;inset:0;
+  background:linear-gradient(160deg,var(--sage) 0%,var(--forest) 60%,var(--bark) 100%);
+  display:flex;align-items:center;justify-content:center;
+}
+.about-img-placeholder span{
+  font-size:5rem;opacity:.3;
+}
+.about-cred-card{
+  position:absolute;bottom:-1.5rem;right:-1.5rem;
+  background:#fff;border-radius:14px;
+  padding:1.25rem 1.5rem;
+  box-shadow:0 12px 40px rgba(30,61,15,.15);
+  min-width:200px;
+}
+.about-cred-card h4{
+  font-size:.7rem;font-weight:600;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--sage);margin-bottom:.75rem;
+}
+.cred-item{
+  display:flex;align-items:center;gap:.5rem;
+  font-size:.8rem;color:var(--text-mid);
+  margin-bottom:.4rem;font-weight:500;
+}
+.cred-dot{
+  width:7px;height:7px;border-radius:50%;
+  background:var(--gold);flex-shrink:0;
+}
+
+.about-content{}
+.about-content .section-eyebrow{margin-bottom:.75rem;}
+
+.about-story{
+  font-size:1rem;color:var(--text-mid);
+  line-height:1.8;margin-bottom:1.5rem;
+}
+.about-story strong{color:var(--forest);font-weight:600;}
+
+.about-truth{
+  background:var(--forest);color:#fff;
+  border-radius:16px;padding:1.75rem 2rem;
+  margin:2rem 0;
+  position:relative;overflow:hidden;
+}
+.about-truth::before{
+  content:'\201C';
+  position:absolute;top:-1rem;left:1rem;
+  font-family:'Playfair Display',serif;
+  font-size:8rem;color:rgba(255,255,255,.08);
+  line-height:1;pointer-events:none;
+}
+.about-truth p{
+  font-family:'Playfair Display',serif;
+  font-size:1.15rem;font-style:italic;
+  line-height:1.65;position:relative;z-index:1;
+}
+.about-truth .attr{
+  font-family:'DM Sans',sans-serif;
+  font-size:.8rem;font-style:normal;
+  color:var(--gold-light);margin-top:.75rem;
+  font-weight:500;letter-spacing:.05em;
+}
+
+.about-property{
+  background:#fff;border-radius:14px;
+  padding:1.5rem;border:1px solid rgba(74,122,46,.15);
+}
+.about-property h4{
+  font-weight:700;color:var(--forest);font-size:.95rem;
+  margin-bottom:.5rem;display:flex;align-items:center;gap:.5rem;
+}
+.about-property p{
+  font-size:.875rem;color:var(--text-mid);line-height:1.6;
+}
+
+/* ── AUDIENCES ──────────────────────────────────────── */
+#audiences{background:var(--warm-white);}
+
+.audience-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:1.5rem;margin-top:3rem;
+}
+.audience-card{
+  border-radius:18px;overflow:hidden;
+  border:1px solid rgba(74,122,46,.15);
+  transition:all .3s;
+  cursor:default;
+}
+.audience-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 20px 50px rgba(30,61,15,.12);
+}
+.aud-top{
+  padding:2rem 1.75rem 1.5rem;
+  background:var(--cream);
+}
+.aud-icon{
+  width:52px;height:52px;border-radius:14px;
+  background:var(--forest);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.5rem;margin-bottom:1.25rem;
+}
+.aud-label{
+  font-size:.7rem;font-weight:600;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--sage);margin-bottom:.4rem;
+}
+.aud-title{
+  font-family:'Playfair Display',serif;
+  font-size:1.2rem;font-weight:700;color:var(--forest);
+  margin-bottom:.5rem;line-height:1.25;
+}
+.aud-desc{
+  font-size:.875rem;color:var(--text-mid);line-height:1.6;
+}
+.aud-bottom{
+  padding:1.25rem 1.75rem;
+  background:#fff;
+  border-top:1px solid rgba(74,122,46,.1);
+}
+.aud-pain{
+  font-size:.8rem;font-weight:600;color:var(--text-light);
+  text-transform:uppercase;letter-spacing:.06em;margin-bottom:.5rem;
+}
+.aud-pain-text{
+  font-size:.875rem;color:var(--text-mid);
+  line-height:1.5;font-style:italic;
+}
+.aud-cta-text{
+  display:inline-flex;align-items:center;gap:.4rem;
+  font-size:.85rem;font-weight:600;color:var(--sage);
+  margin-top:1rem;cursor:pointer;
+  text-decoration:none;
+  transition:gap .2s;
+}
+.aud-cta-text:hover{gap:.7rem;}
+
+/* ── SERVICES ───────────────────────────────────────── */
+#services{
+  background:var(--forest);
+  position:relative;overflow:hidden;
+}
+#services::before{
+  content:'';position:absolute;inset:0;
+  background-image:var(--leaf-pattern);opacity:.3;
+}
+#services .section-title{color:#fff;}
+#services .section-eyebrow{color:var(--gold-light);}
+#services .section-eyebrow::before{background:var(--gold-light);}
+#services .section-sub{color:rgba(255,255,255,.7);}
+
+.services-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:1.5rem;margin-top:3rem;
+  position:relative;z-index:1;
+}
+.service-card{
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:18px;padding:2rem 1.75rem;
+  transition:all .3s;
+  position:relative;overflow:hidden;
+}
+.service-card:hover{
+  background:rgba(255,255,255,.1);
+  transform:translateY(-4px);
+  border-color:rgba(255,255,255,.25);
+}
+.service-tier{
+  font-size:.7rem;font-weight:700;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--gold-light);
+  margin-bottom:1rem;
+  display:flex;align-items:center;gap:.5rem;
+}
+.service-tier::before{
+  content:'';display:block;
+  width:20px;height:1.5px;background:var(--gold-light);
+}
+.service-icon{font-size:2rem;margin-bottom:1rem;display:block;}
+.service-title{
+  font-family:'Playfair Display',serif;
+  font-size:1.25rem;font-weight:700;color:#fff;
+  margin-bottom:.75rem;line-height:1.25;
+}
+.service-desc{
+  font-size:.875rem;color:rgba(255,255,255,.7);
+  line-height:1.7;margin-bottom:1.5rem;
+}
+.service-includes{
+  list-style:none;margin-bottom:1.5rem;
+}
+.service-includes li{
+  font-size:.82rem;color:rgba(255,255,255,.75);
+  padding:.3rem 0;
+  display:flex;align-items:flex-start;gap:.6rem;
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+.service-includes li::before{
+  content:'✓';color:var(--gold-light);font-weight:700;
+  flex-shrink:0;margin-top:.05rem;
+}
+.service-price{
+  display:flex;align-items:baseline;gap:.4rem;
+  margin-bottom:1.25rem;
+}
+.price-from{font-size:.75rem;color:rgba(255,255,255,.5);}
+.price-num{
+  font-family:'DM Mono',monospace;
+  font-size:1.5rem;font-weight:500;color:var(--gold-light);
+}
+.price-unit{font-size:.8rem;color:rgba(255,255,255,.5);}
+.service-btn{
+  display:block;text-align:center;
+  background:var(--gold);color:var(--forest);
+  padding:.7rem 1.25rem;border-radius:50px;
+  font-size:.85rem;font-weight:700;
+  text-decoration:none;transition:all .25s;
+}
+.service-btn:hover{background:var(--gold-light);}
+
+.service-card.featured{
+  background:rgba(184,137,42,.15);
+  border-color:rgba(184,137,42,.4);
+}
+.featured-badge{
+  position:absolute;top:1.25rem;right:1.25rem;
+  background:var(--gold);color:var(--forest);
+  font-size:.65rem;font-weight:700;
+  padding:.25rem .65rem;border-radius:50px;
+  letter-spacing:.06em;text-transform:uppercase;
+}
+
+/* ── PRICING LADDER ─────────────────────────────────── */
+#pricing{background:var(--cream);}
+
+.pricing-grid{
+  display:grid;
+  gap:1rem;margin-top:3rem;
+}
+.pricing-row{
+  background:#fff;border-radius:14px;
+  border:1px solid rgba(74,122,46,.12);
+  display:grid;
+  grid-template-columns:2.5rem 1fr auto;
+  gap:1.25rem;align-items:center;
+  padding:1.25rem 1.5rem;
+  transition:all .25s;
+}
+.pricing-row:hover{
+  border-color:var(--sage);
+  box-shadow:0 4px 20px rgba(30,61,15,.08);
+}
+.pricing-num{
+  font-family:'Playfair Display',serif;
+  font-size:1.4rem;font-weight:700;
+  color:var(--sage-light);line-height:1;
+}
+.pricing-info h4{
+  font-size:.95rem;font-weight:600;color:var(--forest);
+  margin-bottom:.2rem;
+}
+.pricing-info p{
+  font-size:.82rem;color:var(--text-light);line-height:1.4;
+}
+.pricing-amount{
+  font-family:'DM Mono',monospace;
+  font-size:1rem;font-weight:500;
+  color:var(--gold);text-align:right;
+  white-space:nowrap;
+}
+.pricing-amount span{
+  display:block;font-size:.7rem;
+  color:var(--text-light);font-family:'DM Sans',sans-serif;
+  font-weight:400;text-align:right;margin-top:.2rem;
+}
+.pricing-today{
+  background:var(--forest);
+  border-color:var(--forest);
+}
+.pricing-today .pricing-num{color:var(--gold-light);}
+.pricing-today .pricing-info h4{color:#fff;}
+.pricing-today .pricing-info p{color:rgba(255,255,255,.6);}
+.pricing-today .pricing-amount{color:var(--gold-light);}
+.pricing-today .pricing-amount span{color:rgba(255,255,255,.5);}
+
+/* ── PROPERTY ───────────────────────────────────────── */
+#property{background:var(--warm-white);}
+
+.property-grid{
+  display:grid;grid-template-columns:1.3fr 1fr;
+  gap:4rem;align-items:start;margin-top:3rem;
+}
+.property-img{
+  background:var(--forest);
+  border-radius:20px;aspect-ratio:4/3;
+  position:relative;overflow:hidden;
+  display:flex;align-items:center;justify-content:center;
+}
+.property-img-placeholder{
+  position:absolute;inset:0;
+  background:linear-gradient(135deg,var(--forest) 0%,var(--sage) 50%,var(--earth) 100%);
+  display:flex;align-items:center;justify-content:center;
+  font-size:6rem;opacity:.25;
+}
+.property-badge{
+  position:absolute;bottom:1.5rem;left:1.5rem;
+  background:rgba(253,250,244,.95);
+  border-radius:12px;padding:1rem 1.25rem;
+  backdrop-filter:blur(8px);
+}
+.property-badge .num{
+  font-family:'Playfair Display',serif;
+  font-size:1.5rem;font-weight:900;color:var(--forest);
+}
+.property-badge .lbl{
+  font-size:.75rem;color:var(--sage);font-weight:600;
+}
+
+.property-content h3{
+  font-family:'Playfair Display',serif;
+  font-size:1.1rem;font-weight:700;color:var(--forest);
+  margin-bottom:.5rem;
+}
+.property-content p{
+  font-size:.9rem;color:var(--text-mid);
+  line-height:1.7;margin-bottom:1.25rem;
+}
+
+.income-streams{
+  display:grid;gap:.75rem;margin-top:1.5rem;
+}
+.income-item{
+  background:var(--cream);border-radius:12px;
+  padding:1rem 1.25rem;
+  display:flex;align-items:center;gap:1rem;
+  border:1px solid rgba(74,122,46,.1);
+  transition:all .25s;
+}
+.income-item:hover{
+  border-color:var(--sage);
+  transform:translateX(4px);
+}
+.income-icon{font-size:1.25rem;flex-shrink:0;}
+.income-text h5{
+  font-size:.875rem;font-weight:600;
+  color:var(--forest);margin-bottom:.15rem;
+}
+.income-text p{
+  font-size:.78rem;color:var(--text-light);
+  margin:0;line-height:1.4;
+}
+.income-price{
+  margin-left:auto;
+  font-family:'DM Mono',monospace;
+  font-size:.85rem;font-weight:500;
+  color:var(--gold);flex-shrink:0;
+}
+
+/* ── CDC VISION ─────────────────────────────────────── */
+#vision{
+  background:var(--bark);
+  position:relative;overflow:hidden;
+}
+#vision::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,var(--bark) 0%,var(--forest) 100%);
+}
+#vision .section-title{color:#fff;}
+#vision .section-eyebrow{color:var(--gold-light);}
+#vision .section-eyebrow::before{background:var(--gold-light);}
+
+.vision-content{
+  position:relative;z-index:1;
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:4rem;align-items:center;
+}
+.vision-text p{
+  font-size:1rem;color:rgba(255,255,255,.75);
+  line-height:1.8;margin-bottom:1.25rem;
+}
+.vision-highlight{
+  font-family:'Playfair Display',serif;
+  font-size:1.2rem;font-style:italic;
+  color:#fff;line-height:1.6;
+  border-left:3px solid var(--gold);
+  padding-left:1.25rem;
+  margin:2rem 0;
+}
+.vision-card{
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:20px;padding:2.5rem;
+}
+.vision-card h3{
+  font-family:'Playfair Display',serif;
+  font-size:1.4rem;font-weight:700;
+  color:var(--gold-light);margin-bottom:.5rem;
+}
+.vision-card .org{
+  font-size:.8rem;font-weight:600;letter-spacing:.08em;
+  text-transform:uppercase;color:rgba(255,255,255,.5);
+  margin-bottom:1.5rem;
+}
+.vision-pillars{display:grid;gap:.75rem;}
+.pillar{
+  display:flex;align-items:flex-start;gap:.75rem;
+  padding:.75rem;background:rgba(255,255,255,.04);
+  border-radius:10px;border:1px solid rgba(255,255,255,.08);
+}
+.pillar-dot{
+  width:8px;height:8px;border-radius:50%;
+  background:var(--gold);flex-shrink:0;margin-top:.35rem;
+}
+.pillar-text h5{
+  font-size:.875rem;font-weight:600;color:#fff;margin-bottom:.15rem;
+}
+.pillar-text p{
+  font-size:.78rem;color:rgba(255,255,255,.55);
+  margin:0;line-height:1.4;
+}
+.coming-soon-badge{
+  display:inline-flex;align-items:center;gap:.4rem;
+  background:rgba(184,137,42,.25);border:1px solid rgba(184,137,42,.4);
+  color:var(--gold-light);font-size:.72rem;font-weight:600;
+  letter-spacing:.08em;text-transform:uppercase;
+  padding:.35rem .85rem;border-radius:50px;
+  margin-bottom:1.25rem;
+}
+
+/* ── BOOK ───────────────────────────────────────────── */
+#book{
+  background:var(--cream);
+  text-align:center;
+}
+.book-inner{
+  max-width:680px;margin:0 auto;
+}
+.book-inner .section-eyebrow{justify-content:center;}
+.book-inner .section-eyebrow::before{display:none;}
+.book-inner .section-title{text-align:center;}
+.book-options{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:1rem;margin:2.5rem 0;
+  text-align:left;
+}
+.book-option{
+  background:#fff;border-radius:14px;
+  padding:1.25rem;
+  border:1.5px solid transparent;
+  cursor:pointer;transition:all .25s;
+}
+.book-option:hover,.book-option.active{
+  border-color:var(--sage);
+  box-shadow:0 4px 20px rgba(30,61,15,.1);
+}
+.book-option h4{
+  font-size:.9rem;font-weight:700;color:var(--forest);
+  margin-bottom:.25rem;
+}
+.book-option p{
+  font-size:.78rem;color:var(--text-light);line-height:1.4;
+}
+.book-option .opt-price{
+  font-family:'DM Mono',monospace;
+  font-size:1rem;color:var(--gold);font-weight:500;
+  margin-top:.5rem;display:block;
+}
+
+.calendly-embed-placeholder{
+  background:var(--forest);
+  border-radius:20px;padding:3rem 2rem;
+  text-align:center;
+}
+.calendly-embed-placeholder p{
+  color:rgba(255,255,255,.7);font-size:.9rem;margin-bottom:1.5rem;
+}
+
+.book-cta-big{
+  display:inline-flex;align-items:center;gap:.75rem;
+  background:var(--forest);color:#fff;
+  padding:1.1rem 2.5rem;border-radius:50px;
+  font-size:1.05rem;font-weight:700;
+  text-decoration:none;
+  transition:all .3s;
+  box-shadow:0 4px 20px rgba(30,61,15,.3);
+}
+.book-cta-big:hover{
+  background:var(--sage);
+  transform:translateY(-3px);
+  box-shadow:0 8px 30px rgba(30,61,15,.35);
+}
+.book-guarantee{
+  margin-top:1.5rem;
+  font-size:.82rem;color:var(--text-light);
+}
+.book-guarantee strong{color:var(--sage);}
+
+/* ── FOOTER ─────────────────────────────────────────── */
+footer{
+  background:var(--forest);
+  padding:3rem 2rem 2rem;
+}
+.footer-inner{
+  max-width:1100px;margin:0 auto;
+  display:grid;grid-template-columns:1.5fr 1fr 1fr;
+  gap:3rem;margin-bottom:3rem;
+}
+.footer-brand .logo{
+  font-family:'Playfair Display',serif;
+  font-size:1.25rem;font-weight:700;
+  color:#fff;margin-bottom:.75rem;
+}
+.footer-brand .logo span{color:var(--gold-light);}
+.footer-brand p{
+  font-size:.85rem;color:rgba(255,255,255,.55);
+  line-height:1.6;max-width:260px;
+}
+.footer-col h5{
+  font-size:.75rem;font-weight:600;
+  letter-spacing:.1em;text-transform:uppercase;
+  color:var(--gold-light);margin-bottom:1rem;
+}
+.footer-col a{
+  display:block;font-size:.875rem;
+  color:rgba(255,255,255,.6);text-decoration:none;
+  margin-bottom:.5rem;transition:color .2s;
+}
+.footer-col a:hover{color:#fff;}
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.1);
+  padding-top:1.5rem;
+  display:flex;align-items:center;justify-content:space-between;
+  max-width:1100px;margin:0 auto;
+}
+.footer-bottom p{
+  font-size:.78rem;color:rgba(255,255,255,.35);
+}
+.footer-tagline{
+  font-family:'Playfair Display',serif;
+  font-size:.85rem;font-style:italic;
+  color:rgba(255,255,255,.35);
+}
+
+/* ── ANIMATIONS ─────────────────────────────────────── */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(24px)}
+  to{opacity:1;transform:translateY(0)}
+}
+@keyframes fadeIn{
+  from{opacity:0}to{opacity:1}
+}
+
+/* ── MOBILE ─────────────────────────────────────────── */
+@media(max-width:768px){
+  #hero{grid-template-columns:1fr;}
+  .hero-left{padding:3rem 1.5rem;}
+  .hero-right{display:none;}
+  .about-grid,.property-grid,.vision-content{grid-template-columns:1fr;}
+  .audience-grid,.services-grid{grid-template-columns:1fr;}
+  .book-options{grid-template-columns:1fr;}
+  .footer-inner{grid-template-columns:1fr;}
+  .nav-links{display:none;}
+  .about-cred-card{position:static;margin-top:1rem;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- ── NAVIGATION ──────────────────────────────────── -->
+<nav>
+  <div class="nav-logo">Ieisha <span>Fuller</span></div>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#property">The Property</a>
+    <a href="#vision">Vision</a>
+    <a href="https://calendly.com/ieishafuller-pcaa" target="_blank" class="nav-cta">Book a Call</a>
+  </div>
+</nav>
+
+<!-- ── HERO ────────────────────────────────────────── -->
+<section id="hero">
+  <div class="hero-bg-pattern"></div>
+
+  <div class="hero-left">
+    <div class="hero-eyebrow">🌿 Master Naturalist &amp; Land Literacy Educator</div>
+    <h1 class="hero-name">
+      <em>Your land</em> is your most powerful financial tool.
+    </h1>
+    <p class="hero-statement">
+      I'm <strong>Ieisha Fuller</strong> — a Certified Master Naturalist, HR &amp; Operations leader, and wildlife gardening educator who helps small land owners turn what's already growing into <strong>daily income and generational wealth.</strong>
+    </p>
+    <div class="hero-badges">
+      <span class="badge">Certified Master Naturalist</span>
+      <span class="badge">Garden Club President</span>
+      <span class="badge">Small Farmer Trained</span>
+      <span class="badge">Egg Candling Certified</span>
+      <span class="badge">20+ yrs HR &amp; Ops</span>
+    </div>
+    <div class="hero-actions">
+      <a href="https://calendly.com/ieishafuller-pcaa" target="_blank" class="btn-primary">
+        Book Your Wildlife Garden Audit →
+      </a>
+      <a href="#about" class="btn-ghost">Learn My Story</a>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="hero-card">
+      <div class="hero-stat-grid">
+        <div class="hero-stat">
+          <span class="hero-stat-num">20+</span>
+          <span class="hero-stat-label">Years of professional expertise</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">.46</span>
+          <span class="hero-stat-label">Acres — your proof of concept</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">$97</span>
+          <span class="hero-stat-label">Wildlife Garden Audit — book today</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">6+</span>
+          <span class="hero-stat-label">Income streams from one property</span>
+        </div>
+      </div>
+      <p class="hero-quote">
+        "Your landscape is already an asset. I'll show you how to make it earn."
+      </p>
+      <a href="https://calendly.com/ieishafuller-pcaa" target="_blank" class="hero-book-cta">
+        <div>
+          Book Wildlife Garden Income Audit
+          <span>60 min · $97 · Virtual via Google Meet</span>
+        </div>
+        <span>→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── ABOUT ────────────────────────────────────────── -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+
+      <div class="about-visual">
+        <div class="about-img-frame">
+          <div class="about-img-placeholder"><span>🌿</span></div>
+        </div>
+        <div class="about-cred-card">
+          <h4>Credentials</h4>
+          <div class="cred-item"><div class="cred-dot"></div>Certified Master Naturalist</div>
+          <div class="cred-item"><div class="cred-dot"></div>B.S. Technical Management</div>
+          <div class="cred-item"><div class="cred-dot"></div>Garden Club President</div>
+          <div class="cred-item"><div class="cred-dot"></div>Small Farmer Trained</div>
+          <div class="cred-item"><div class="cred-dot"></div>Egg Candling Certified</div>
+          <div class="cred-item"><div class="cred-dot"></div>20+ Years HR &amp; Ops</div>
+        </div>
+      </div>
+
+      <div class="about-content">
+        <div class="section-eyebrow">My Story</div>
+        <h2 class="section-title">Where ecological knowledge meets land economics</h2>
+
+        <p class="about-story">
+          I am a <strong>Certified Master Naturalist</strong>, former HR and operations leader, wildlife gardening educator, and Garden Club President with a B.S. in Technical Management. But more than any title — I am proof that a small piece of land, tended with intention and knowledge, can become a complete income ecosystem.
+        </p>
+        <p class="about-story">
+          For years I worked at the intersection of people, systems, and strategy in corporate environments. I know how to build frameworks that work, how to train others to use them, and how to lead organizations through complex change. What I discovered is that <strong>the same skills that make a great HR leader make a great land educator</strong> — clarity, systems thinking, and genuine care for the person in front of you.
+        </p>
+        <p class="about-story">
+          Now I bring all of that to one mission: helping passionate gardeners, small land owners, and nature content creators understand that <strong>the land beneath their feet is the most powerful financial tool they will ever own.</strong>
+        </p>
+
+        <div class="about-truth">
+          <p>"Your .46 acres is not a limitation. It is your most powerful marketing asset. Nobody else has your exact property, your exact credentials, and your exact vision. That is your moat."</p>
+          <div class="attr">— The philosophy behind everything I teach</div>
+        </div>
+
+        <div class="about-property">
+          <h4>🏡 My .46 Acre Demonstration Property</h4>
+          <p>Located in Southeast DeKalb County, GA — my own property is not just a garden. It is my classroom, my content studio, my proof of concept, and a developing hospitality experience. When I teach, I teach from lived experience on real land.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── WHO I SERVE ───────────────────────────────────── -->
+<section id="audiences">
+  <div class="container">
+    <div class="section-eyebrow">Who I Serve</div>
+    <h2 class="section-title">Three audiences. One powerful truth.</h2>
+    <p class="section-sub">Your land is already working for you — you just haven't learned how to read it yet. Here's who I work with.</p>
+
+    <div class="audience-grid">
+
+      <div class="audience-card">
+        <div class="aud-top">
+          <div class="aud-icon">🌱</div>
+          <div class="aud-label">Audience 01</div>
+          <h3 class="aud-title">The Passionate Wildlife Gardener</h3>
+          <p class="aud-desc">You love your garden. You know your plants. You photograph every butterfly and celebrate every native bloom. But you haven't figured out how to make your passion pay.</p>
+        </div>
+        <div class="aud-bottom">
+          <div class="aud-pain">You're telling yourself:</div>
+          <p class="aud-pain-text">"I don't have enough followers / experience / a big enough yard to monetize this."</p>
+          <a href="https://calendly.com/ieishafuller-pcaa" target="_blank" class="aud-cta-text">That's exactly what we fix →</a>
+        </div>
+      </div>
+
+      <div class="audience-card">
+        <div class="aud-top">
+          <div class="aud-icon">🏡</div>
+          <div class="aud-label">Audience 02</div>
+          <h3 class="aud-title">The Small Land Owner</h3>
+          <p class="aud-desc">You own land — a lot, a backyard, a small property — and you sense it could do more. You think you need more acreage, more money, or more time before you can start. You don't.</p>
+        </div>
+        <div class="aud-bottom">
+          <div class="aud-pain">You're telling yourself:</div>
+          <p class="aud-pain-text">"I only have under an acre. That's not enough to matter."</p>
+          <a href="https://calendly.com/ieishafuller-pcaa" target="_blank" class="aud-cta-text">My .46 acres proves otherwise →</a>
+        </div>
+      </div>
+
+      <div class="audience-card">
+        <div class="aud-top">
+          <div class="aud-icon">📱</div>
+          <div class="aud-label">Audience 03</div>
+          <h3 class="aud-title">The Nature Content Creator</h3>
+          <p class="aud-desc">You're already posting. You have followers who love your content. You're building something — but the income hasn't followed yet. You're missing the business layer, not the passion.</p>
+        </div>
+        <div class="aud-bottom">
+          <div class="aud-pain">You're telling yourself:</div>
+          <p class="aud-pain-text">"I love creating but I don't know how to turn this into real income."</p>
+          <a href="https://calendly.com/ieishafuller-pcaa" target="_blank" class="aud-cta-text">Let's build that layer together →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── SERVICES ──────────────────────────────────────── -->
+<section id="services">
+  <div class="container">
+    <div class="section-eyebrow">How I Work With You</div>
+    <h2 class="section-title">Three ways to work together</h2>
+    <p class="section-sub">Start where you are. Every path leads to the same destination — a landscape that earns.</p>
+
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-tier">Virtual · Scalable</div>
+        <span class="service-icon">💻</span>
+        <h3 class="service-title">Virtual Coaching &amp; Digital Education</h3>
+        <p class="service-desc">The fastest and most accessible way to start. We meet on Google Meet and map your exact path from passion to paycheck — no matter where you are.</p>
+        <ul class="service-includes">
+          <li>Wildlife Garden Income Audit (60 min)</li>
+          <li>4-Week Landscape to Income Coaching</li>
+          <li>AI Tools for Nature Creators Course</li>
+          <li>Digital products, guides &amp; prompt packs</li>
+          <li>Monthly membership community</li>
+        </ul>
+        <div class="service-price">
+          <span class="price-from">from</span>
+          <span class="price-num">$27</span>
+          <span class="price-unit">/ digital · $97+ / coaching</span>
+        </div>
+        <a href="https://calendly.com/ieishafuller-pcaa" target="_blank" class="service-btn">Book an Audit Call</a>
+      </div>
+
+      <div class="service-card featured">
+        <div class="featured-badge">Most Popular</div>
+        <div class="service-tier">Premium · High-Touch</div>
+        <span class="service-icon">🌿</span>
+        <h3 class="service-title">Onsite Landscape Consultation</h3>
+        <p class="service-desc">I come to your property. We walk your land together and I show you exactly what it can become — ecologically, financially, and experientially.</p>
+        <ul class="service-includes">
+          <li>Full property walk and assessment</li>
+          <li>Wildlife habitat design recommendations</li>
+          <li>Land monetization roadmap</li>
+          <li>Written report delivered within 48hrs</li>
+          <li>Microfarm &amp; ADU opportunity mapping</li>
+        </ul>
+        <div class="service-price">
+          <span class="price-from">from</span>
+          <span class="price-num">$350</span>
+          <span class="price-unit">/ half day visit</span>
+        </div>
+        <a href="https://calendly.com/ieishafuller-pcaa" target="_blank" class="service-btn">Book a Consultation</a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-tier">Experience · Immersive</div>
+        <span class="service-icon">🏕</span>
+        <h3 class="service-title">Property Experience &amp; Workshops</h3>
+        <p class="service-desc">Come to my .46-acre demonstration property in Southeast DeKalb for a hands-on workshop, skill day, or the upcoming Stay &amp; Learn hospitality experience.</p>
+        <ul class="service-includes">
+          <li>Paid skill workshops on my property</li>
+          <li>Microfarm training days</li>
+          <li>Egg candling skill sessions</li>
+          <li>Wildlife garden group tours</li>
+          <li>Stay &amp; Learn Airbnb experience (coming soon)</li>
+        </ul>
+        <div class="service-price">
+          <span class="price-from">from</span>
+          <span class="price-num">$75</span>
+          <span class="price-unit">/ person · $197 workshops</span>
+        </div>
+        <a href="https://calendly.com/ieishafuller-pcaa" target="_blank" class="service-btn">Inquire About Workshops</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── PRICING ───────────────────────────────────────── -->
+<section id="pricing">
+  <div class="container">
+    <div class="section-eyebrow">Investment</div>
+    <h2 class="section-title">Your income ladder starts here</h2>
+    <p class="section-sub">Every layer builds on the last. Start at the bottom. Climb as your confidence and income grow.</p>
+
+    <div class="pricing-grid">
+
+      <div class="pricing-row pricing-today">
+        <div class="pricing-num">→</div>
+        <div class="pricing-info">
+          <h4>Wildlife Garden Income Audit — START HERE TODAY</h4>
+          <p>60-minute 1:1 call. We map your exact path from passion to paycheck. This is your first move.</p>
+        </div>
+        <div class="pricing-amount">$97<span>60 min · Zoom</span></div>
+      </div>
+
+      <div class="pricing-row">
+        <div class="pricing-num">01</div>
+        <div class="pricing-info">
+          <h4>Free Resources</h4>
+          <p>Wildlife Garden Income Audit PDF · 5 AI Tools for Nature Creators Guide · Weekly Newsletter</p>
+        </div>
+        <div class="pricing-amount">FREE<span>Download now</span></div>
+      </div>
+
+      <div class="pricing-row">
+        <div class="pricing-num">02</div>
+        <div class="pricing-info">
+          <h4>Quick Answer Consult</h4>
+          <p>20-minute focused call on one specific question or challenge.</p>
+        </div>
+        <div class="pricing-amount">$37<span>20 min</span></div>
+      </div>
+
+      <div class="pricing-row">
+        <div class="pricing-num">03</div>
+        <div class="pricing-info">
+          <h4>Digital Products</h4>
+          <p>AI Prompt Pack · Microfarm Starter Kit · "Turn Your Garden Into Content" Mini Course</p>
+        </div>
+        <div class="pricing-amount">$27–$97<span>Instant download</span></div>
+      </div>
+
+      <div class="pricing-row">
+        <div class="pricing-num">04</div>
+        <div class="pricing-info">
+          <h4>Landscape to Income — 4-Week Coaching</h4>
+          <p>4 x 60-min calls plus resources. Build your complete land income strategy with me.</p>
+        </div>
+        <div class="pricing-amount">$497<span>4 sessions</span></div>
+      </div>
+
+      <div class="pricing-row">
+        <div class="pricing-num">05</div>
+        <div class="pricing-info">
+          <h4>Monthly Membership Community</h4>
+          <p>Monthly Q&amp;A, templates, AI prompts, and community with fellow land educators.</p>
+        </div>
+        <div class="pricing-amount">$37/mo<span>Recurring</span></div>
+      </div>
+
+      <div class="pricing-row">
+        <div class="pricing-num">06</div>
+        <div class="pricing-info">
+          <h4>Onsite Landscape Consultation</h4>
+          <p>I come to your property. Full assessment, habitat design, monetization roadmap + written report.</p>
+        </div>
+        <div class="pricing-amount">$350–$750<span>Your location</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── PROPERTY ───────────────────────────────────────── -->
+<section id="property">
+  <div class="container">
+    <div class="section-eyebrow">My Proof of Concept</div>
+    <h2 class="section-title">What .46 acres can become</h2>
+
+    <div class="property-grid">
+      <div>
+        <div class="property-img">
+          <div class="property-img-placeholder">🌿</div>
+          <div class="property-badge">
+            <div class="num">.46</div>
+            <div class="lbl">Acres · Southeast DeKalb, GA</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="property-content">
+        <h3>This land is not a hobby. It is a business.</h3>
+        <p>My .46-acre property in Southeast DeKalb County is my classroom, my content studio, my living proof of concept, and a developing hospitality experience. I teach from this land because I live what I teach.</p>
+        <p>Every native plant, every habitat feature, every workshop held here is both an act of ecological stewardship and a revenue-generating asset. This is what I want to show you is possible on your land.</p>
+
+        <div class="income-streams">
+          <div class="income-item">
+            <div class="income-icon">🎓</div>
+            <div class="income-text">
+              <h5>Virtual Coaching</h5>
+              <p>Income while I'm inside — reaches clients nationally</p>
+            </div>
+            <div class="income-price">$97–$497</div>
+          </div>
+          <div class="income-item">
+            <div class="income-icon">🌿</div>
+            <div class="income-text">
+              <h5>On-Property Workshops</h5>
+              <p>Skill days, tours, and microfarm training</p>
+            </div>
+            <div class="income-price">$75–$197</div>
+          </div>
+          <div class="income-item">
+            <div class="income-icon">🏕</div>
+            <div class="income-text">
+              <h5>Stay &amp; Learn Experience</h5>
+              <p>Airbnb hospitality concept — coming soon</p>
+            </div>
+            <div class="income-price">$350+</div>
+          </div>
+          <div class="income-item">
+            <div class="income-icon">📱</div>
+            <div class="income-text">
+              <h5>YouTube Content Engine</h5>
+              <p>Recorded in the garden — works while I'm outside</p>
+            </div>
+            <div class="income-price">Passive</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CDC VISION ────────────────────────────────────── -->
+<section id="vision">
+  <div class="container">
+    <div class="vision-content">
+      <div class="vision-text">
+        <div class="section-eyebrow">The Bigger Vision</div>
+        <h2 class="section-title">Where this is all going</h2>
+        <p>Wildlife gardening is the most beautiful door into a much bigger conversation: that land — especially in communities like Southeast DeKalb — is a tool of wealth, sovereignty, and self-determination that too many people have been locked out of understanding.</p>
+        <p>I teach people how to monetize their garden. But underneath that work is a deeper belief: that when people understand the land beneath their feet, they become harder to displace, harder to ignore, and more powerful in their own communities.</p>
+        <div class="vision-highlight">
+          "The wildlife gardening business is your on-ramp. The destination is generational wealth — for individuals and for whole communities."
+        </div>
+        <p>That's why the work doesn't stop at coaching calls and YouTube videos.</p>
+      </div>
+
+      <div>
+        <div class="coming-soon-badge">⏳ Coming 2025–2026</div>
+        <div class="vision-card">
+          <h3>Cultivated Ground CDC</h3>
+          <div class="org">Community Development Corporation · Southeast DeKalb County, GA</div>
+          <div class="vision-pillars">
+            <div class="pillar">
+              <div class="pillar-dot"></div>
+              <div class="pillar-text">
+                <h5>Housing &amp; Land Stewardship</h5>
+                <p>ADU development, senior homeowner income, anti-displacement advocacy</p>
+              </div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-dot"></div>
+              <div class="pillar-text">
+                <h5>Food Sovereignty</h5>
+                <p>Agricultural access, community growing, land-based food systems</p>
+              </div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-dot"></div>
+              <div class="pillar-text">
+                <h5>Generational Wealth</h5>
+                <p>Land literacy education, property monetization, community ownership</p>
+              </div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-dot"></div>
+              <div class="pillar-text">
+                <h5>Community Advocacy</h5>
+                <p>Zoning representation, CDFI access, self-determined neighborhood futures</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── BOOK ───────────────────────────────────────────── -->
+<section id="book">
+  <div class="container">
+    <div class="book-inner">
+      <div class="section-eyebrow">Ready to Start</div>
+      <h2 class="section-title">Your land is waiting.<br/>Let's make it work.</h2>
+      <p class="section-sub" style="margin:0 auto 2rem;text-align:center;">
+        Book your Wildlife Garden Income Audit. 60 minutes. $97. We map your exact path from passion to paycheck — starting with what's already growing.
+      </p>
+
+      <div class="book-options">
+        <div class="book-option">
+          <h4>Wildlife Garden Audit</h4>
+          <p>Map your income path in 60 min</p>
+          <span class="opt-price">$97</span>
+        </div>
+        <div class="book-option">
+          <h4>Quick Answer Call</h4>
+          <p>One focused question, 20 min</p>
+          <span class="opt-price">$37</span>
+        </div>
+        <div class="book-option">
+          <h4>Onsite Consultation</h4>
+          <p>I come to your property</p>
+          <span class="opt-price">$350+</span>
+        </div>
+      </div>
+
+      <a href="https://calendly.com/ieishafuller-pcaa" target="_blank" class="book-cta-big">
+        🌿 Book on Calendly — ieishafuller-pcaa
+      </a>
+      <p class="book-guarantee">
+        <strong>No pressure. No hype.</strong> Just a real conversation about what your land can do.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ────────────────────────────────────────── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="logo">Ieisha <span>Fuller</span></div>
+      <p>Master Naturalist · HR &amp; Operations Leader · Wildlife Gardening Educator · Land Literacy Advocate · Southeast DeKalb County, GA</p>
+    </div>
+    <div class="footer-col">
+      <h5>Services</h5>
+      <a href="https://calendly.com/ieishafuller-pcaa" target="_blank">Wildlife Garden Audit ($97)</a>
+      <a href="https://calendly.com/ieishafuller-pcaa" target="_blank">4-Week Coaching ($497)</a>
+      <a href="https://calendly.com/ieishafuller-pcaa" target="_blank">Onsite Consultation ($350+)</a>
+      <a href="#pricing">Full Pricing</a>
+    </div>
+    <div class="footer-col">
+      <h5>Connect</h5>
+      <a href="https://calendly.com/ieishafuller-pcaa" target="_blank">Book a Call</a>
+      <a href="#vision">Cultivated Ground CDC</a>
+      <a href="#about">My Story</a>
+      <a href="#property">The Property</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Ieisha Fuller. All rights reserved.</p>
+    <div class="footer-tagline">"Your land is your most powerful financial tool."</div>
+  </div>
+</footer>
+
+<script>
+// Smooth nav highlight on scroll
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-links a');
+
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(s => {
+    if (window.scrollY >= s.offsetTop - 120) current = s.id;
+  });
+  navLinks.forEach(a => {
+    a.style.color = a.getAttribute('href') === '#' + current
+      ? 'var(--sage)' : '';
+  });
+});
+
+// Subtle entrance animations on scroll
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.style.opacity = '1';
+      e.target.style.transform = 'translateY(0)';
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll(
+  '.audience-card, .service-card, .pricing-row, .income-item, .pillar'
+).forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(20px)';
+  el.style.transition = 'opacity .5s ease, transform .5s ease';
+  observer.observe(el);
+});
+</script>
+
+</body>
+</html>
